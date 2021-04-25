@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+
+        <!-- Título da página -->
+        <title>Registro de lote</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo  -->
+        <div>
+            <h1 id="titulo">Registro de lote produição de suínos</h1>
+            <p id="subtitulo">Registre aqui seu lote</p>
+            <br>
+        </div>
+
+        <!-- Início -->
+        <form>
+
+            <fieldset class="grupo">
+                <!-- Campo para o número do lote" -->
+                <div class="campo">
+                    <label for="numero"><strong>Número do lote</strong></label>
+                    <input type="text" name="numero" id="numero" required>
+                </div>
+
+            </fieldset> 
+
+            <!-- Campo de intervalo de lote-->
+            <div class="campo">
+                <label for="intervalo"><strong>Intervalo até receber o lote</strong></label>
+                <input type="text" name="intervalo" id="numero" required>
+            </div>
+
+            <!-- Campo de recebimento de lote" -->
+            <div class="campo">
+                <label for="recebimento"><strong>Selecione a data de recebimento do lote</strong></label>
+                <div>
+                    <label for="id_recebimento">Data:
+                        <input type = "date" name="field_recebimento" id="recebimento">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Campo de entrega de lote" -->
+            <div class="campo">
+                <label for="entrega"><strong>Selecione a data de entrega do lote</strong></label>
+                <div>
+                    <label for="id_nascimento">Data:
+                        <input type = "date" name="field_entrega" id="entrega">
+                    </label>
+                </div>
+            </div>
+
+            <fieldset class="grupo">
+                <!-- Campo para Número de leitões recebidos -->
+                <div class="campo">
+                    <label for="numero"><strong>Número de leitões recebidos</strong></label>
+                    <input type="text" name="numero" id="numero" required>
+                </div>
+
+                <!-- Campo para Número de leitões entregues -->
+                <div class="campo">
+                    <label for="numero"><strong>Número de leitões entregues</strong></label>
+                    <input type="text" name="numero" id="numero" required>
+                </div>
+            </fieldset> 
+
+            <fieldset class="grupo">
+                <!-- Campo para Número de suínos mortos -->
+                <div class="campo">
+                    <label for="numero"><strong>Número de suínos mortos</strong></label>
+                    <input type="text" name="numero" id="numero" required>
+                </div>
+
+            </fieldset> 
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br>
+                <label for="adicionais"><strong>Detalhes adicionais sobre o lote: </strong></label>
+                <textarea rows="6" style="width: 26em" id="adicionais" name="adicionais"></textarea>
+            </div>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+
+    </body>
+
+</html>
