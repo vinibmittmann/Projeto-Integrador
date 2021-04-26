@@ -22,6 +22,22 @@
     display: inline-block;
 }
 
+/* Elementos de tag <header> */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 55%;
+    height: 40px;
+    padding: 0 8%;
+    margin-left: -30%;
+    margin-top: -5%;
+
+    position: fixed;
+    z-index: 2;
+}
+
 /* Elementos de tag <fieldset>*/
 fieldset {
     border: 0;
@@ -34,7 +50,7 @@ body{
     font-size: 1em;
     color: #000000;
     margin-left: 36%;
-    margin-top: 2%;
+    margin-top: 8%;
     justify-content: center;
 }
 
@@ -44,6 +60,39 @@ input, select, textarea, button {
     font-size: 1em;
     color: #000000;
     border-radius: 5px;
+}
+
+/* Elementos de tag <aside> */
+.conexao{
+    background-color: #429a9d;
+    padding: 10px;
+    padding-top: 0%;
+    padding-bottom: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.5rem;
+    width: 35%;
+    height: 15px;
+    margin-left: -47%;
+    margin-top: -55%;
+}
+
+.conexao2{
+    background-color: #429a9d;
+    padding: 10px;
+    padding-top: 0%;
+    padding-bottom: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.5rem;
+    width: 35%;
+    height: 15px;
+    margin-left: -47%;
+    margin-top: -55%;
 }
 
 /* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
@@ -100,8 +149,8 @@ fieldset.grupo .campo {
     margin-bottom: 1em;
     color: #000000;
     padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
     position: absolute;
     top: 75%;
     left: 47%;
@@ -128,8 +177,8 @@ fieldset.grupo .campo {
     margin-bottom: 1em;
     color: #000000;
     padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
     position: absolute;
     top: 65%;
     left: 47%;
@@ -139,7 +188,7 @@ fieldset.grupo .campo {
 
 .botao2:hover {
     background: #ffffff;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: inset 2px 2px 2px rgb(0, 0, 0);
     text-shadow: none;
 }
 
@@ -147,3 +196,161 @@ fieldset.grupo .campo {
 .botao2, select{
     cursor: pointer;
 }
+
+/* Elementos de tag <nav> */
+.navbar {
+    display: none;
+    padding-bottom : 1rem;
+}
+  
+.navitem {
+    color:#000000;
+    display: block;
+    margin-left: 1rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    border-top: 1px dashed #429a9d;
+    text-decoration : none;
+    font-size: 1rem;
+}
+
+@media
+  only screen
+  and (min-width : 700px) {
+  header {
+    border-bottom    : 4px solid #429a9d;
+    background-color : #429a9d;
+  }
+
+    footer {
+        background-color: #429a9d;
+        color: #efefef;
+        padding: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: .9rem;
+        width: 107.5%;
+        height: 15px;
+        margin-left: -47%;
+        margin-top: 5%;
+    }
+
+    .navbar {
+        display: inline-flex;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+  
+    .navitem {
+        display: inherit;
+        padding-right: 0.1rem;
+        border: none;
+        text-decoration : none;
+        font-size: 1.2rem;
+    }
+
+    .grupo:before, .grupo:after {
+        display: table;
+    }
+
+
+    .grupo:after {
+        clear: both;
+    }
+
+    .campo {
+        margin-bottom: 1em;
+    }
+
+    .conexao {
+        align-self: flex-start;
+        margin-top: -655px;
+    }
+    
+    .conexao2 {
+        align-self: flex-start;
+        margin-top: -550px;
+    }
+
+    .campo label {
+        margin-bottom: 0.2em;
+        color: #000000;
+        display: block;
+    }
+
+    fieldset.grupo .campo {
+        float:  left;
+        margin-right: 1em;
+    }
+
+    .campo input[type="text"], .campo input[type="intervalo"], input[type=date] .campo select, .campo textarea {
+        padding: 0.2em;
+        border: 1px solid #429a9d;
+        box-shadow: 2px 2px 2px #429a9d;
+        display: block;
+    }   
+
+    .campo select option {
+        padding-right: 1em;
+    }
+
+    .campo input:focus, .campo select:focus, .campo textarea:focus {
+        background: #429a9d;
+    }
+
+    .botao {
+        font-size: 1.2em;
+        background: #429a9d;
+        border: 0;
+        margin-bottom: 1em;
+        color: #000000;
+        padding: 0.2em 0.6em;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        position: absolute;
+        top: 85%;
+        left: 47%;
+        margin-right: -45%;
+        transform: translate(-50%, -50%)
+    }
+
+    .botao:hover {
+        background: #ffffff;
+        box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+        text-shadow: none;
+    }
+
+    .botao, select{
+        cursor: pointer;
+    }
+
+    .botao2 {
+        font-size: 1.2em;
+        background: #429a9d;
+        border: 0;
+        margin-bottom: 1em;
+        color: #000000;
+        padding: 0.2em 0.6em;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        position: absolute;
+        top: 75%;
+        left: 47%;
+        margin-right: -45%;
+        transform: translate(-50%, -50%)
+    }
+
+    .botao2:hover {
+        background: #ffffff;
+        box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+        text-shadow: none;
+    }
+
+    .botao2, select{
+        cursor: pointer;
+    }
+}
+
