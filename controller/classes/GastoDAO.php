@@ -1,8 +1,8 @@
 <?php
     require_once "Conexao.php";
-    require_once "Gasto.php";
+    require_once "Gastos.php";
 
-    class GastoDAO{
+    class GastosDAO{
         
         public $conexao;
 
@@ -12,9 +12,9 @@
 
         public function listar(){
             try{
-                $query = $this->conexao->prepare("select * from gasto order by numLote");
+                $query = $this->conexao->prepare("select * from gastos order by numLote");
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gasto");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gastos");
                 return $registros;
             }
             catch(PDOException $e){
@@ -24,10 +24,10 @@
 
         public function buscar($numLote){
             try{
-                $query = $this->conexao->prepare("select * from gasto where numLote=:c");
+                $query = $this->conexao->prepare("select * from gastos where numLote=:c");
                 $query->bindParam(":c", $numLote, PDO::PARAM_INT);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gasto");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gastos");
                 return $registros[0];
             }
             catch(PDOException $e){
@@ -35,17 +35,17 @@
             }
         }        
 
-        public function inserir(Gasto $gasto){
+        public function inserir(Gastos $gastos){
             try{
-                $query = $this->conexao->prepare("insert into gasto values (:l, :v, :m, :d, :r, :tx, :p, :a)");
-                $query->bindValue(":l", $gasto->getnumLote());
-                $query->bindValue(":v", $gasto->getgtVeterinario());
-                $query->bindValue(":m", $gasto->getgtMedicamento());
-                $query->bindValue(":d", $gasto->getdescMortalidade());
-                $query->bindValue(":r", $gasto->getgtRacao());
-                $query->bindValue(":tx", $gasto->gettxFunrural());
-                $query->bindValue(":p", $gasto->getmanPropriedade());
-                $query->bindValue(":a", $gasto->getdescAbate());
+                $query = $this->conexao->prepare("insert into gastos values (:l, :v, :m, :d, :r, :tx, :p, :a)");
+                $query->bindValue(":l", $gastos->getnumLote());
+                $query->bindValue(":v", $gastos->getgtVeterinario());
+                $query->bindValue(":m", $gastos->getgtMedicamento());
+                $query->bindValue(":d", $gastos->getdescMortalidade());
+                $query->bindValue(":r", $gastos->getgtRacao());
+                $query->bindValue(":tx", $gastos->gettxFunrural());
+                $query->bindValue(":p", $gastos->getmanPropriedade());
+                $query->bindValue(":a", $gastos->getdescAbate());
                 return $query->execute();
             }
             catch(PDOException $e){
@@ -53,17 +53,17 @@
             }
         }
 
-        public function alterar(Gasto $gasto){
+        public function alterar(Gastos $gastos){
             try{
-                $query = $this->conexao->prepare("update gasto set gtVeterinario = :v, gtMedicamento = :m, descMortalidade = :d, gtRacao = :r, txFunrural = :tx, manPropriedade = :p, descAbate = :a where numLote = :l");
-                $query->bindValue(":l", $gasto->getnumLote());
-                $query->bindValue(":v", $gasto->getgtVeterinario());
-                $query->bindValue(":m", $gasto->getgtMedicamento());
-                $query->bindValue(":d", $gasto->getdescMortalidade());
-                $query->bindValue(":r", $gasto->getgtRacao());
-                $query->bindValue(":tx", $gasto->gettxFunrural());
-                $query->bindValue(":p", $gasto->getmanPropriedade());
-                $query->bindValue(":a", $gasto->getdescAbate());
+                $query = $this->conexao->prepare("update gastos set gtVeterinario = :v, gtMedicamento = :m, descMortalidade = :d, gtRacao = :r, txFunrural = :tx, manPropriedade = :p, descAbate = :a where numLote = :l");
+                $query->bindValue(":l", $gastos->getnumLote());
+                $query->bindValue(":v", $gastos->getgtVeterinario());
+                $query->bindValue(":m", $gastos->getgtMedicamento());
+                $query->bindValue(":d", $gastos->getdescMortalidade());
+                $query->bindValue(":r", $gastos->getgtRacao());
+                $query->bindValue(":tx", $gastos->gettxFunrural());
+                $query->bindValue(":p", $gastos->getmanPropriedade());
+                $query->bindValue(":a", $gastos->getdescAbate());
                 return $query->execute();
             }
             catch(PDOException $e){
@@ -73,7 +73,7 @@
 
         public function excluir($numLote){
             try{
-                $query = $this->conexao->prepare("delete from gasto where numLote = :l");
+                $query = $this->conexao->prepare("delete from gastos where numLote = :l");
                 $query->bindValue(":c", $numLote);
                 return $query->execute();
             }

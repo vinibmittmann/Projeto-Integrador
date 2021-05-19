@@ -1,5 +1,5 @@
 <?php
-    class Gasto{
+    class Gastos{
 
         private $numLote;
         private $gtVeterinario;

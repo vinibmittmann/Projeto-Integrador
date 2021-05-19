@@ -1,5 +1,5 @@
 <?php
-    class Recebimento{
+    class Recebimentos{
 
         private $numLote;
         private $valorBaseVigente;
