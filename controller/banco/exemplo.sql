@@ -27,6 +27,7 @@ create table lote(
 );
 
 create table gastos(
+  codGasto INTEGER AUTO_INCREMENT PRIMARY KEY,
   numLote INTEGER NOT NULL,
   gtVeterinario FLOAT NOT NULL,
   gtMedicamento FLOAT NOT NULL,
@@ -39,6 +40,7 @@ create table gastos(
 );
 
 create table recebimentos(
+  codRecebimento INTEGER AUTO_INCREMENT PRIMARY KEY,
   numLote INTEGER NOT NULL,
   valorBaseVigente FLOAT NOT NULL,
   boniPropriedade FLOAT NOT NULL,
