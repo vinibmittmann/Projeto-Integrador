@@ -24,8 +24,8 @@
 
         public function buscar($numLote){
             try{
-                $query = $this->conexao->prepare("select * from lote where numLote=:c");
-                $query->bindParam(":c", $numLote, PDO::PARAM_INT);
+                $query = $this->conexao->prepare("select * from lote where numLote=:l");
+                $query->bindParam(":l", $numLote, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Lote");
                 return $registros[0];
@@ -69,8 +69,8 @@
 
         public function excluir($numLote){
             try{
-                $query = $this->conexao->prepare("delete from lote where numLote = :c");
-                $query->bindValue(":c", $numLote);
+                $query = $this->conexao->prepare("delete from lote where numLote = :l");
+                $query->bindValue(":l", $numLote);
                 return $query->execute();
             }
             catch(PDOException $e){
