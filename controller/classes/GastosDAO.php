@@ -74,7 +74,7 @@
         public function excluir($numLote){
             try{
                 $query = $this->conexao->prepare("delete from gastos where numLote = :l");
-                $query->bindValue(":c", $numLote);
+                $query->bindValue(":l", $numLote);
                 return $query->execute();
             }
             catch(PDOException $e){
