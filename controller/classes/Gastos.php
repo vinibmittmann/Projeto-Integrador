@@ -1,6 +1,7 @@
 <?php
     class Gastos{
 
+        private $codGasto;
         private $numLote;
         private $gtVeterinario;
         private $gtMedicamento;
@@ -10,6 +11,13 @@
         private $manPropriedade;
         private $descAbate;
 
+        public function getcodGasto(){
+            return $this->codGasto;
+        }
+
+        public function setcodGasto($codGasto){
+            $this->codGasto = $codGasto;
+        }
 
         public function getnumLote(){
             return $this->numLote;

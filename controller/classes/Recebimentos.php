@@ -1,6 +1,7 @@
 <?php
     class Recebimentos{
 
+        private $codRecebimento;
         private $numLote;
         private $valorBaseVigente;
         private $boniPropriedade;
@@ -10,6 +11,13 @@
         private $boniProdutor;
         private $valorSuino;
 
+        public function getcodRecebimento(){
+            return $this->codRecebimento;
+        }
+
+        public function setcodRecebimento($codRecebimento){
+            $this->codRecebimento = $codRecebimento;
+        }
 
         public function getnumLote(){
             return $this->numLote;
