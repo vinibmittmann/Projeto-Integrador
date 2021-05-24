@@ -3,7 +3,7 @@ include_once "../controller/classes/UsuarioDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new UsuarioDAO();
     
-    include "../views/configuracoes.php";
+    include "../ver/configuracoes.php";
 }
 else {    
 	switch($_GET['acao']){

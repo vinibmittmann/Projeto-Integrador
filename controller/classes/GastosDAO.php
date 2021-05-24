@@ -25,7 +25,7 @@
         public function buscar($codGasto){
             try{
                 $query = $this->conexao->prepare("select * from gastos where codGasto=:c");
-                $query->bindParam(":l", $codGasto, PDO::PARAM_INT);
+                $query->bindParam(":c", $codGasto, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gastos");
                 return $registros[0];
