@@ -8,7 +8,7 @@ DROP USER IF EXISTS 'admvini'@'localhost';
 
 CREATE USER 'admvini'@'localhost' IDENTIFIED BY '12345'; 
 
-GRANT SELECT, INSERT, UPDATE, DELETE ON projetointegrado.* TO 'admvini'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON projetointegrador.* TO 'admvini'@'localhost';
 
 CREATE TABLE usuario(
   nomeLogin VARCHAR(40) NOT NULL, 

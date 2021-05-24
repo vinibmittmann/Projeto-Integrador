@@ -3,7 +3,7 @@ include_once "../controller/classes/LoteDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new LoteDAO();
     $lista = $obj->listar();
-    include "views/cadastraLote.php";
+    include "views/listaLote.php";
 }
 else {    
 	switch($_GET['acao']){

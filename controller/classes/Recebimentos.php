@@ -50,22 +50,6 @@
         public function setpontuacaoLote($pontuacaoLote){
             $this->pontuacaoLote = $pontuacaoLote;
         }
-
-        public function getDataMorte(){
-            return $this->dataMorte;
-        }
-
-        public function setDataMorte($dataMorte){
-            $this->dataMorte = $dataMorte;
-        }
-
-        public function getMotivoMorte(){
-            return $this->motivoMorte;
-        }
-
-        public function setMotivoMorte($motivoMorte){
-            $this->motivoMorte = $motivoMorte;
-        }     
         
         public function getquiloBonificacao(){
             return $this->quiloBonificacao;
