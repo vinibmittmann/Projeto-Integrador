@@ -9,14 +9,14 @@
   <link href="../css/style.css" rel="stylesheet">
 </head>
 
-    <?php require_once("../includes/header.php");?>
+    <?php require_once("../../includes/header.php");?>
     <h3>VER GASTOS</h3>
     <div class="lista_lote">
         
-        <button class="button-form-adicionar-lote" onclick="window.location.href='gastosController.php?acao=adiciona'">Adicionar gastos</button>
+        <button class="button-form-adicionar-lote" onclick="window.location.href='gastosController.php?acao=adiciona'">Ver gastos</button>
 
           <?php
-          require_once "../controller/classes/GastosDAO.php";
+          require_once "../classes/GastosDAO.php";
           $obj = new GastosDAO();
           $lista = $obj->listar(); 
           if(count($lista) == 0){
@@ -52,4 +52,4 @@
 
     </div>
 
-    <?php require_once("../includes/footer.php");?>
+    <?php require_once("../../includes/footer.php");?>

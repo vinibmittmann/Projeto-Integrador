@@ -3,7 +3,7 @@ include_once "../controller/classes/GastosDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new GastosDAO();
     $lista = $obj->listar();
-    include "views/cadastraGasto.php";
+    include "../controller/views/listaGasto.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -42,6 +42,7 @@ else {
             }
             else{ 
                 $obj = new Gastos();
+                $obj->setcodGasto($_POST['field_codGasto']);
                 $obj->setnumLote($_POST['field_numLote']);
                 $obj->setgtVeterinario($_POST['field_gtVeterinario']);
                 $obj->setgtMedicamento($_POST['field_gtMedicamento']);

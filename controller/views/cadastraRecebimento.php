@@ -28,7 +28,7 @@
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_valorBaseVigente">Valor Base Vigente </label>
-    <input type="number" name="field_valorBaseVigente" id="id_valorBaseVigente" value="<?=$gtvalorBaseVigente?>" required>
+    <input type="number" name="field_valorBaseVigente" id="id_valorBaseVigente" value="<?=$valorBaseVigente?>" required>
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_boniPropriedade">Bonificação da Propriedade </label>
@@ -36,7 +36,7 @@
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_pontuacaoLote">Pontuação do Lote </label>
-    <input type="number" step="0.01" name="field_pontuacaoLote" id="id_pontuacaoLotee" value="<?=$pontuacaoLote?>" required>
+    <input type="number" step="0.01" name="field_pontuacaoLote" id="id_pontuacaoLote" value="<?=$pontuacaoLote?>" required>
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_quiloBonificacao">Bonificação por KG </label>

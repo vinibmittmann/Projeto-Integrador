@@ -37,7 +37,7 @@
 
         public function inserir(Recebimentos $recebimentos){
             try{
-                $query = $this->conexao->prepare("insert into recebimentos values (:l, :vb, :p, :pl, :q, :e, :bp, :s)");
+                $query = $this->conexao->prepare("insert into recebimentos values (NULL, :l, :vb, :p, :pl, :q, :e, :bp, :s)");
                 $query->bindValue(":l", $recebimentos->getnumLote());
                 $query->bindValue(":vb", $recebimentos->getvalorBaseVigente());
                 $query->bindValue(":p", $recebimentos->getboniPropriedade());

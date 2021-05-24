@@ -12,7 +12,7 @@
 
         public function listar(){
             try{
-                $query = $this->conexao->prepare("select * from gastos order by numLote");
+                $query = $this->conexao->prepare("select * from gastos order by codGasto");
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gastos");
                 return $registros;
@@ -22,10 +22,10 @@
             }
         }
 
-        public function buscar($numLote){
+        public function buscar($codGasto){
             try{
-                $query = $this->conexao->prepare("select * from gastos where numLote=:l");
-                $query->bindParam(":l", $numLote, PDO::PARAM_INT);
+                $query = $this->conexao->prepare("select * from gastos where codGasto=:c");
+                $query->bindParam(":l", $codGasto, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gastos");
                 return $registros[0];
@@ -37,7 +37,7 @@
 
         public function inserir(Gastos $gastos){
             try{
-                $query = $this->conexao->prepare("insert into gastos values (:l, :v, :m, :d, :r, :tx, :p, :a)");
+                $query = $this->conexao->prepare("insert into gastos values (NULL, :l, :v, :m, :d, :r, :tx, :p, :a)");
                 $query->bindValue(":l", $gastos->getnumLote());
                 $query->bindValue(":v", $gastos->getgtVeterinario());
                 $query->bindValue(":m", $gastos->getgtMedicamento());
@@ -55,7 +55,8 @@
 
         public function alterar(Gastos $gastos){
             try{
-                $query = $this->conexao->prepare("update gastos set gtVeterinario = :v, gtMedicamento = :m, descMortalidade = :d, gtRacao = :r, txFunrural = :tx, manPropriedade = :p, descAbate = :a where numLote = :l");
+                $query = $this->conexao->prepare("update gastos set numLote = :l, gtVeterinario = :v, gtMedicamento = :m, descMortalidade = :d, gtRacao = :r, txFunrural = :tx, manPropriedade = :p, descAbate = :a where codGasto = :c");
+                $query->bindValue(":c", $gastos->getcodGasto());
                 $query->bindValue(":l", $gastos->getnumLote());
                 $query->bindValue(":v", $gastos->getgtVeterinario());
                 $query->bindValue(":m", $gastos->getgtMedicamento());

@@ -7,6 +7,7 @@
     foreach($erros as $e)
       echo "<li>$e</li>";
   }
+  $codGasto = isset($_POST['field_codGasto']) ? $_POST['field_codGasto'] : $gastos->getcodGasto();
   $numLote = isset($_POST['field_numLote']) ? $_POST['field_numLote'] : $gastos->getnumLote();
   $gtVeterinario = isset($_POST['field_gtVeterinario']) ? $_POST['field_gtVeterinario'] : $gastos->getgtVeterinario();
   $gtMedicamento = isset($_POST['field_gtMedicamento']) ? $_POST['field_gtMedicamento'] : $gastos->getgtMedicamento();
@@ -18,7 +19,7 @@
 ?>
 </div>
 
-<?php require_once("../includes/header.php");?>
+<?php require_once("../../includes/header.php");?>
 
 <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
 
