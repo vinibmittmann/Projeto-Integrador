@@ -6,7 +6,7 @@
 //    $nomeLogin = $_POST['nomeLogin'];
 //    $senha = $_POST['senha'];
 //
-//    if($nomeLogin == 'pedro'){  
+//    if($nomeLogin == 'vini'){  
 //        if(password_verify($senha, 'dG9tYW5vY3U=')){ 
 //            session_start();
 //            $_SESSION['logado'] = true;
@@ -26,10 +26,9 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="shortcut icon" href="../img/mstRedondo.png">
-  <meta name="author" content="Fabrício Romani e Pedro Lill">
-  <meta name="description" content="Cooptar - cooperativa agropecuária">
-  <meta name="keywords" content="mst, cooperativa, pontão, agropecuária, bovino">
+  <meta name="author" content="Vinícius Batirola Mittmann">
+  <meta name="description" content="Sistema de controle para produção de suínos">
+  <meta name="keywords" content="sistema, controle, produção, suínocultura, suíno">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>LOGIN</title>
