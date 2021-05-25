@@ -36,7 +36,7 @@
                       <strong>Número de leitões entregue: </strong>  <?=$lote->getnumEntregue() ?> <br>
                       <strong>Número de leitões mortos: </strong>  <?=$lote->getnumMorte() ?> <br>
                   </div>
-                  <div>
+                  <div class = "lote_button">
                       <button class="button-edit" onclick="window.location.href='loteController.php?acao=altera&numLote=<?=$lote->getnumLote() ?>'"><i class="fa fa-edit fa-1x"></i></button>
                       <button class="button-delete" onclick='verificarExcluir(<?=$lote->getnumLote()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
                   </div>
