@@ -1,0 +1,97 @@
+h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.lote {
+    cursor: pointer;
+    width: 40vw;
+    font-size: 15px;
+    background-color: #6a6a6a;
+    border: 1px solid #1591F1;
+    margin: 20px 4vw 0 4vw;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.lote:hover {
+    box-shadow: 3px 3px 10px #1591F1;
+}
+
+.lote .label {
+    display: flex;
+    margin: 15px;
+    align-items: center;
+}
+
+.lote_descricao {
+    margin-left: 20px;
+    font-size: 16px;
+    width: 40%;
+    display: block;
+    flex-direction: column;
+}
+
+.button-delete {
+    background-color: #6a6a6a;
+    color: #1591F1;
+    font-size: 20px;
+    font-weight: 200;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+}
+
+.button-edit {
+    background-color: #6a6a6a;
+    color: #1591F1;
+    font-size: 20px;
+    font-weight: 200;
+    width: 45px;
+    height: 45px;
+    margin-left: 50px;
+}
+
+.button-edit:hover {
+    background-color: #00000094;
+}
+
+.button-delete:hover {
+    background-color: #0000007a;
+}
+
+@media (max-width:1000px) {
+    .lote {
+        width: 40vw;
+        font-size: 13px;
+        margin: 20px 4vw 0 4vw;
+    }
+    .lote_descricao {
+        margin-left: 20px;
+        font-size: 14px;
+        width: 40%;
+    }
+}
+
+@media (max-width:500px) {
+    .lote_descricao {
+        margin-left: 10px;
+        font-size: 12px;
+        width: 80%;
+    }
+    .button-edit {
+        width: 35px;
+        font-size: 15px;
+        height: 35px;
+        margin-left: 10px;
+    }
+    .button-delete {
+        width: 35px;
+        font-size: 15px;
+        height: 35px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}

@@ -25,7 +25,7 @@
             <li><a href="../../controller/gastosController.php?acao=adiciona">Gastos</a></li>
             <li><a href="../../controller/recebimentosController.php?acao=adiciona">Recebimentos</a></li>
         </ul>
-        <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a>
+        <!-- <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a> -->
     </header>
 <script src="../js/header.js"></script> 
 </body>
