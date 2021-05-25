@@ -18,7 +18,7 @@
           <?php
           require_once "../controller/classes/GastosDAO.php";
           $obj = new GastosDAO();
-          $lista = $obj->buscaLista($numLote); 
+          $lista = $obj->listar(); 
           if(count($lista) == 0){
               echo "Nenhum dado encontrado.";
           }else{
