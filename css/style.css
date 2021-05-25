@@ -1,90 +1,87 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
 :root {
-  --primary-color: #1591F1;
+    --primary-color: #1591F1;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  transition: transform 0.3s;
-  background-color: #ebebeb;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    transition: transform 0.3s;
+    background-color: #ebebeb;
 }
 
 header {
-  background-color: var(--primary-color);
-  color: #6a6a6a;
-  height: 60px;
-  position: relative;
-  padding: 0px 15px;
+    background-color: var(--primary-color);
+    color: #6a6a6a;
+    height: 60px;
+    position: relative;
+    padding: 0px 15px;
 }
 
 header ul {
-  width: 80vw;
-  list-style-type: none;
-  margin: 0;
-  text-decoration: none;
+    width: 80vw;
+    list-style-type: none;
+    margin: 0;
+    text-decoration: none;
 }
 
 header ul li {
-  list-style: none;
-  padding-top:15px;
-  display: inline-block;
+    list-style: none;
+    padding-top: 15px;
+    display: inline-block;
 }
 
-header ul li a {    
-  padding: 8px;
-  font-size:15px;
-  font-weight: 600;
-  color: #6a6a6a;
-  text-decoration: none;
-  transition: 0.5s;
-  line-height: 25px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  margin-right: 5px;
+header ul li a {
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s;
+    line-height: 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-right: 5px;
 }
 
-header ul li a:hover{
-  background-color:#1591F1;
-  cursor: pointer;
+header ul li a:hover {
+    background-color: #1591F1;
+    cursor: pointer;
 }
 
-button, input[type='submit'] {
-  border: 0;
-  border-radius: 5px;
-  color: #6a6a6a;
-  cursor: pointer;
-  padding: 8px 12px;
+button,
+input[type='submit'] {
+    border: 0;
+    border-radius: 5px;
+    color: #6a6a6a;
+    cursor: pointer;
+    padding: 8px 12px;
 }
 
 button:focus {
-  outline: none;
+    outline: none;
 }
 
-
 .checkbtn {
-  font-size: 40px;
-  color: #6a6a6a;
-  float: left;
-  cursor: pointer;
-  display: none;
-  font-weight: bolder;
-  padding: 5px;
-  text-align: center;
+    font-size: 40px;
+    color: #6a6a6a;
+    float: left;
+    cursor: pointer;
+    display: none;
+    font-weight: bolder;
+    padding: 5px;
+    text-align: center;
 }
 
 #check {
-  display: none;
+    display: none;
 }
 
 @media (max-width:1100px) {
-
     header {
         max-width: 1100px;
         padding: 0 2vw 0 4vw;
     }
-
     header ul {
         background-color: #1591F1;
         top: 60px;
@@ -97,28 +94,24 @@ button:focus {
         padding-inline-start: 0;
         height: 80vh;
     }
-
     header ul li {
-      padding:0;
+        padding: 0;
         width: 100%;
         height: 10vh;
         float: none;
         display: block;
         align-items: center;
-      }
-    
+    }
     header ul li a {
-      float: left;
-      padding: 2vh 0 2vh 0;
-      width: 100%;
-      margin: 0 0 0 0;
-      font-size: 15px;
-      line-height: 30px;
-      height: 6vh;
-      border-radius: 0px;
-
-  }
-
+        float: left;
+        padding: 2vh 0 2vh 0;
+        width: 100%;
+        margin: 0 0 0 0;
+        font-size: 15px;
+        line-height: 30px;
+        height: 6vh;
+        border-radius: 0px;
+    }
     .checkbtn {
         display: block;
         font-size: 36px;
@@ -126,14 +119,13 @@ button:focus {
         height: 40px;
     }
     .logo-header {
-      margin-top:5px;
+        margin-top: 5px;
     }
 }
 
 @media (max-width:500px) {
-
-  header ul {
-      width: 60vw;
-      height: 80vh;
-  }
+    header ul {
+        width: 60vw;
+        height: 80vh;
+    }
 }

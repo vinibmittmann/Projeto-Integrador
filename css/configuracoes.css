@@ -1,0 +1,56 @@
+.lista-configuracoes li a{
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+    
+  .lista-configuracoes{
+    list-style: none;
+  }
+  
+  .lista-configuracoes li{
+    width: 20vw;
+    cursor: pointer;
+    margin: 10px 0 0 5vw;
+    padding:13px;
+    background-color:rgb(213, 213, 213);
+    border-radius: 5px;
+  }
+  
+  .lista-configuracoes li:hover{
+    background-color:rgb(158, 158, 158);
+  }
+  
+  .icone-configuracoes{
+    text-decoration: none;
+    padding: 15px;
+    margin-top: -40px;
+    float: right;
+  }
+    
+  .icone-configuracoes i{
+    color: rgb(141, 141, 141);
+    font-size:27px;
+    height: 100%;
+  }
+  
+  .icone-configuracoes i:hover{
+    color: rgb(202, 202, 202);
+  }
+  
+  @media (max-width:1100px) {
+    .icone-configuracoes{
+      margin-top: 0px;
+    }
+  }
+  
+  @media (max-width:500px) {
+    .lista-configuracoes li{
+      width: 70vw;
+      margin: 10px 0 0 0;
+    }
+  }

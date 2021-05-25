@@ -1,0 +1,210 @@
+.container-historicos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 30%;
+    width: 40%;
+}
+
+input[type=date],
+input[type=text],
+input[type=file],
+select,
+input[type=number],
+input[type=password],
+input[type=checkbox] {
+    background-color: #1591F1;
+    width: 100%;
+    padding: 6px 10px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: 1.8px solid #1591F1;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 17px;
+    cursor: pointer;
+    height: 40px;
+}
+
+input[type=date]:hover,
+input[type=text]:hover,
+input[type=file]:hover,
+select:hover,
+input[type=number]:hover,
+input[type=password]:hover,
+input[type=checkbox]:hover {
+    border: 1.8px solid #6a6a6a;
+}
+
+input[type=date]:focus,
+input[type=text]:focus,
+input[type=file]:focus,
+select:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=checkbox]:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.label-cadastra {
+    width: 100%;
+    margin: 5px 0 0 0;
+    display: block;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.container-historicos h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.historico {
+    color: white;
+    background-color: #26551df5;
+    border-radius: 13px;
+    padding: 15px;
+    font-size: 17px;
+    text-align: center;
+    width: 20%;
+    margin: 1%;
+    height: 40px;
+}
+
+.historico:hover,
+.historico label:hover {
+    background-color: #6a6a6a;
+    cursor: pointer;
+}
+
+.button-form {
+    background-color: #1591F1;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 15px 0 0 40%;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button-form-altera {
+    background-color: #1592F1;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 15px 0 0 1%;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button-form-voltar a {
+    width: 100%;
+    height: 100%;
+}
+
+.button-form-altera a {
+    width: 100%;
+    height: 100%;
+}
+
+.button-form-altera:hover {
+    background-color: #104312;
+}
+
+.button-form-voltar {
+    background-color: #e2e1e1;
+    color: black;
+    padding: 10px;
+    margin: 15px 1% 0 30%;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #3c3b3b;
+    width: 20%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button-form-voltar:hover {
+    background-color: #bbbaba;
+}
+
+.div-metade {
+    width: 48%;
+    margin: 0 1% 0 1%;
+}
+
+.div-inteira {
+    width: 98%;
+    margin: 0 1% 0 1%;
+}
+
+.button-form:hover {
+    background-color: #000000;
+}
+
+.botoes-adiciona {
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+.button-adiciona-historico-altera {
+    background-color: #164818;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media (max-width:800px) {
+    .container-historicos {
+        margin-left: 20vw;
+        width: 60vw;
+    }
+    input[type=date],
+    input[type=text],
+    input[type=file],
+    select,
+    input[type=number],
+    input[type=password],
+    input[type=checkbox] {
+        width: 100%;
+        font-size: 15px;
+    }
+    .button-form {
+        width: 20vw;
+        font-size: 13px;
+    }
+    .label-cadastra {
+        width: 100%;
+        font-size: 13px;
+    }
+}
+
+@media (max-width:500px) {
+    .container-historicos {
+        font-size: 13px;
+        margin-left: 10%;
+        width: 80%;
+    }
+    input[type=date],
+    input[type=text],
+    input[type=file],
+    select,
+    input[type=number],
+    input[type=password],
+    input[type=checkbox] {
+        width: 100%;
+        font-size: 13px;
+    }
+}

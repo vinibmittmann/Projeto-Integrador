@@ -20,15 +20,15 @@
 
   <h2>Registrar Lote</h2>
   
-  <div class="div-metade">
+  <div class="div-inteira">
     <label class="label-cadastra" for="id_numLote">Número do lote </label>
     <input type="number" name="field_numLote" id="id_numLote" value="<?=$numLote?>" required>
   </div>
-  <div class="div-metade">
+  <div class="div-inteira">
     <label class="label-cadastra" for="id_dtRecebimento">Data de Recebimento </label>
     <input type="date" name="field_dtRecebimento" maxlength="100" id="id_dtRecebimento" value="<?=$dtRecebimento?>" required>
   </div>
-  <div class="div-metade">
+  <div class="div-inteira">
     <label class="label-cadastra" for="id_dtEntrega">Data de Entrega </label>
     <input type="date" name="field_dtEntrega" maxlength="100" id="id_dtEntrega" value="<?=$dtEntrega?>" required>
   </div>

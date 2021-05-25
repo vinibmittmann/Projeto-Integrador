@@ -42,17 +42,17 @@ button {
     font-weight: bold;
 }
 
-.container-login  .login-a{
+.container-login .login-a {
     margin: 15px 40% 0 40%;
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
-    padding:5px;
+    padding: 5px;
 }
 
-a{
+a {
     background-color: #1591F1;
-    color: #6A6A6A;
+    color: #000000;
     padding: 10px;
     margin: 15px 40% 0 40%;
     border: none;
@@ -62,6 +62,6 @@ a{
     font-weight: bold;
 }
 
-.container-login  .login-a:hover{
+.container-login .login-a:hover {
     background-color: #6A6A6A;
 }
