@@ -14,6 +14,7 @@
     <link href="../css/login.css" rel="stylesheet"./>
     <link href="../css/adicionar.css" rel="stylesheet"./>
     <link href="../css/footer.css" rel="stylesheet"./>
+    <link href="../css/lista.css" rel="stylesheet"./>
     <title>SISTEMA DE CONTROLE PARA PRODUÇÃO DE SUÍNOS</title>
 </head>
 <body>
