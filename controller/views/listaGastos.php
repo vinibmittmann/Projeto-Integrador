@@ -13,7 +13,7 @@
     <h3>VER GASTOS</h3>
     <div class="lista_lote">
         
-        <button class="button-form-adicionar-lote" onclick="window.location.href='gastosController.php?acao=adiciona'">Ver gastos</button>
+        <button class="button-form-adicionar-lote" onclick="window.location.href='gastosController.php?acao=adiciona'">Adicionar novos gastos</button>
 
           <?php
           require_once "../controller/classes/GastosDAO.php";

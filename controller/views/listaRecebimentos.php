@@ -13,7 +13,7 @@
     <h3>VER RECEBIMENTOS</h3>
     <div class="lista_lote">
         
-        <button class="button-form-adicionar-lote" onclick="window.location.href='recebimentosController.php?acao=adiciona'">Adicionar rebimentos</button>
+        <button class="button-form-adicionar-lote" onclick="window.location.href='recebimentosController.php?acao=adiciona'">Adicionar novos rebimentos</button>
 
           <?php
           require_once "../controller/classes/RecebimentosDAO.php";
