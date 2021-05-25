@@ -37,7 +37,7 @@ else {
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new RecebimentosDAO();
-                $recebimentos = $obj->alterar($_GET['codRecebimento']);
+                $recebimentos = $obj->buscarAltera($_GET['codRecebimento']);
                 include "views/alteraRecebimento.php";
             }
             else{ 

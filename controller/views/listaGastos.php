@@ -9,16 +9,16 @@
   <link href="../css/style.css" rel="stylesheet">
 </head>
 
-    <?php require_once("../../includes/header.php");?>
+    <?php require_once("../includes/header.php");?>
     <h3>VER GASTOS</h3>
     <div class="lista_lote">
         
         <button class="button-form-adicionar-lote" onclick="window.location.href='gastosController.php?acao=adiciona'">Ver gastos</button>
 
           <?php
-          require_once "../classes/GastosDAO.php";
+          require_once "../controller/classes/GastosDAO.php";
           $obj = new GastosDAO();
-          $lista = $obj->listar(); 
+          $lista = $obj->buscaLista($numLote); 
           if(count($lista) == 0){
               echo "Nenhum dado encontrado.";
           }else{
@@ -38,8 +38,8 @@
                       <strong>Man propriedade: </strong> <?=$gastos->getmanPropriedade() ?> <br>
                       <strong>Desc abate: </strong> <?=$gastos->getdescAbate() ?> <br>
                   </div>
-                  <div>
-                      <button class="button-edit" onclick="window.location.href='gastosController.php?acao=altera&numLote=<?=$gastos->getnumLote() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+                  <div class="lote_button">
+                      <button class="button-edit" onclick="window.location.href='gastosController.php?acao=altera&codGasto=<?=$gastos->getcodGasto() ?>'"><i class="fa fa-edit fa-1x"></i></button>
                       <button class="button-delete" onclick='verificarExcluir(<?=$gastos->getnumLote()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
                   </div>
               </div>
@@ -52,4 +52,4 @@
 
     </div>
 
-    <?php require_once("../../includes/footer.php");?>
+    <?php require_once("../includes/footer.php");?>

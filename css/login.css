@@ -25,7 +25,7 @@ input[type=password] {
     padding: 6px 10px;
     margin: 5px 0 5px 25%;
     display: inline-block;
-    border: 0.5px solid #3c3b3b;
+    border: 0.5px solid #000;
     box-sizing: border-box;
     font-size: 17px;
 }
@@ -52,9 +52,9 @@ button {
 
 a {
     background-color: #1591F1;
-    color: #000000;
+    color: #6a6a6a;
     padding: 10px;
-    margin: 15px 40% 0 40%;
+    margin: 15px 40% 0 25%;
     border: none;
     cursor: pointer;
     width: 25%;

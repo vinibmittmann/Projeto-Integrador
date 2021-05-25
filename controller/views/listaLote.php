@@ -13,7 +13,7 @@
     <h3>VER LOTE</h3>
     <div class="lista_lote">
         
-        <button class="button-form-adicionar-lote" onclick="window.location.href='loteController.php?acao=adiciona'">Adicionar lote</button>
+        <button class="button-form-adicionar-lote" onclick="window.location.href='loteController.php?acao=adiciona'">Adicionar novo lote</button>
 
           <?php
           require_once "../controller/classes/LoteDAO.php";
@@ -30,11 +30,11 @@
               <div class="label">
                   <div class="lote_descricao">
                       <strong>Número do lote: </strong> <?=$lote->getnumLote()?> <br>
-                      <strong>Data rec.: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($lote->getDtRecebimento())));?>
-                      <strong>Data ent.: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($lote->getDtEntrega())));?>
-                      <strong>Núm recebido: </strong> <?=$lote->getnumRecebido() ?> <br>
-                      <strong>Núm entregue: </strong>  <?=$lote->getnumEntregue() ?> <br>
-                      <strong>Núm morte: </strong>  <?=$lote->getnumMorte() ?> <br>
+                      <strong>Data de recebimento: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($lote->getDtRecebimento())));?>
+                      <strong>Data de entrega: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($lote->getDtEntrega())));?>
+                      <strong>Número de leitões recebidos: </strong> <?=$lote->getnumRecebido() ?> <br>
+                      <strong>Número de leitões entregue: </strong>  <?=$lote->getnumEntregue() ?> <br>
+                      <strong>Número de leitões mortos: </strong>  <?=$lote->getnumMorte() ?> <br>
                   </div>
                   <div>
                       <button class="button-edit" onclick="window.location.href='loteController.php?acao=altera&numLote=<?=$lote->getnumLote() ?>'"><i class="fa fa-edit fa-1x"></i></button>

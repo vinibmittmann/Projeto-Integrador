@@ -22,6 +22,32 @@
             }
         }
 
+        public function buscaLista($numLote){
+            try{
+                $query = $this->conexao->prepare("select * from gastos where numLote = :l");
+                $query->bindParam(":l", $numLote, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gastos");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        } 
+
+        public function buscarAltera($codGasto){
+            try{
+                $query = $this->conexao->prepare("select * from gastos where codGasto = :c");
+                $query->bindParam(":c", $codGasto);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Gastos");
+                return $registros[0];
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
+
         public function buscar($codGasto){
             try{
                 $query = $this->conexao->prepare("select * from gastos where codGasto=:c");

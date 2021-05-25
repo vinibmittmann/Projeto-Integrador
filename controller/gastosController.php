@@ -3,7 +3,7 @@ include_once "../controller/classes/GastosDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new GastosDAO();
     $lista = $obj->listar();
-    include "../controller/views/listaGasto.php";
+    include "views/listaGastos.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -37,7 +37,7 @@ else {
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new GastosDAO();
-                $gastos = $obj->alterar($_GET['codGastos']);
+                $gastos = $obj->buscarAltera($_GET['codGasto']);
                 include "views/alteraGasto.php";
             }
             else{ 

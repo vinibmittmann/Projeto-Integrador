@@ -19,7 +19,7 @@
 ?>
 </div>
 
-<?php require_once("../../includes/header.php");?>
+<?php require_once("../includes/header.php");?>
 
 <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
 

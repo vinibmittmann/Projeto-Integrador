@@ -25,6 +25,9 @@
             <li><a href="../../controller/loteController.php?acao=adiciona">Lote</a></li>
             <li><a href="../../controller/gastosController.php?acao=adiciona">Gastos</a></li>
             <li><a href="../../controller/recebimentosController.php?acao=adiciona">Recebimentos</a></li>
+            <li><a href="../../controller/loteController.php"> Ver Lote</a></li>
+            <li><a href="../../controller/gastosController.php"> Ver Gt</a></li>
+            <li><a href="../../controller/recebimentosController.php"> Ver Rec</a></li>
         </ul>
         <!-- <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a> -->
     </header>

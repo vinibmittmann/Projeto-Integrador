@@ -46,8 +46,9 @@
     <label class="label-cadastra" for="id_numMorte">Núm de leitões mortos </label>
     <input type="number" name="field_numMorte" id="id_numMorte" value="<?=$numMorte?>" required>
   </div>
-  <button name="adiciona" class="button-form" type="submit">Salvar</button>
+  <button name="altera" class="button-form" type="submit">Salvar</button>
   
 </form>
-
+<?php include ("listaGastos.php");?>
+<?php include ("listaRecebimentos.php");?>
 

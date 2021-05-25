@@ -35,7 +35,7 @@ else {
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new LoteDAO();
-                $lote = $obj->alterar($_GET['numLote']);
+                $lote = $obj->buscar($_GET['numLote']);
                 include "views/alteraLote.php";
             }
             else{ 

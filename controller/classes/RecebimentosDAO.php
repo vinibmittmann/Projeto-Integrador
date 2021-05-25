@@ -22,13 +22,26 @@
             }
         }
 
+        public function buscarAltera($codRecebimento){
+            try{
+                $query = $this->conexao->prepare("select * from recebimentos where codRecebimento = :c");
+                $query->bindParam(":c", $codRecebimento);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Recebimentos");
+                return $registros[0];
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
+
         public function buscar($numLote){
             try{
                 $query = $this->conexao->prepare("select * from recebimentos where numLote=:l");
                 $query->bindParam(":l", $numLote, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Recebimentos");
-                return $registros[0];
+                return $registros;
             }
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();
@@ -55,7 +68,8 @@
 
         public function alterar(Recebimentos $recebimentos){
             try{
-                $query = $this->conexao->prepare("update recebimentos set valorBaseVigente = :vb, boniPropriedade = :p, pontuacaoLote = :pl, quiloBonificacao = :q, boniEmpresa = :e, boniProdutor = :bp, valorSuino = :s  where numLote = :l");
+                $query = $this->conexao->prepare("update recebimentos set numLote = :l, valorBaseVigente = :vb, boniPropriedade = :p, pontuacaoLote = :pl, quiloBonificacao = :q, boniEmpresa = :e, boniProdutor = :bp, valorSuino = :s  where codRecebimento = :c");
+                $query->bindValue(":c", $recebimentos->getcodRecebimento());
                 $query->bindValue(":l", $recebimentos->getnumLote());
                 $query->bindValue(":vb", $recebimentos->getvalorBaseVigente());
                 $query->bindValue(":p", $recebimentos->getboniPropriedade());

@@ -7,6 +7,7 @@
     foreach($erros as $e)
       echo "<li>$e</li>";
   }
+  $codRecebimento = isset($_POST['field_codRecebimento']) ? $_POST['field_codRecebimento'] : $recebimentos->getcodRecebimento();
   $numLote = isset($_POST['field_numLote']) ? $_POST['field_numLote'] : $recebimentos->getnumLote();
   $valorBaseVigente = isset($_POST['field_valorBaseVigente']) ? $_POST['field_valorBaseVigente'] : $recebimentos->getvalorBaseVigente();
   $boniPropriedade = isset($_POST['field_boniPropriedade']) ? $_POST['field_boniPropriedade'] : $recebimentos->getboniPropriedade();

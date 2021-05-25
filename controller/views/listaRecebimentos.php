@@ -38,8 +38,8 @@
                       <strong>Bonif produtor: </strong> <?=$recebimentos->getboniProdutor() ?> <br>
                       <strong>Vl suino: </strong> <?=$recebimentos->getvalorSuino() ?> <br>
                   </div>
-                  <div>
-                      <button class="button-edit" onclick="window.location.href='recebimentosController.php?acao=altera&numLote=<?=$recebimentos->getnumLote() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+                  <div class = "lote_button">
+                      <button class="button-edit" onclick="window.location.href='recebimentosController.php?acao=altera&codRecebimento=<?=$recebimentos->getcodRecebimento() ?>'"><i class="fa fa-edit fa-1x"></i></button>
                       <button class="button-delete" onclick='verificarExcluir(<?=$recebimentos->getnumLote()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
                   </div>
               </div>
