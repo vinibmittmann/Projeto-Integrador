@@ -33,14 +33,14 @@
                       <strong>Gt veterinário: </strong> <?=$gastos->getgtVeterinario() ?> <br>
                       <strong>Gt medicamento: </strong> <?=$gastos->getgtMedicamento() ?> <br>
                       <strong>Desc mortalidade: </strong> <?=$gastos->getdescMortalidade() ?> <br>
-                      <strong>Gt ração: </strong>  <?=$gastos->getgtRacao() ?> <br>
-                      <strong>Tx funrural: </strong>  <?=$gastos->gettxFunrural() ?> <br>
+                      <strong>Gt com ração: </strong>  <?=$gastos->getgtRacao() ?> <br>
+                      <strong>Taxa funrural: </strong>  <?=$gastos->gettxFunrural() ?> <br>
                       <strong>Man propriedade: </strong> <?=$gastos->getmanPropriedade() ?> <br>
                       <strong>Desc abate: </strong> <?=$gastos->getdescAbate() ?> <br>
                   </div>
                   <div class="lote_button">
                       <button class="button-edit" onclick="window.location.href='gastosController.php?acao=altera&codGasto=<?=$gastos->getcodGasto() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                      <button class="button-delete" onclick='verificarExcluir(<?=$gastos->getnumLote()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
+                      <button class="button-delete" onclick="window.location.href='gastosController.php?acao=exclui&codGasto=<?=$gastos->getcodGasto() ?>'"><i class="fa fa-trash-alt fa-1x"></i></button>
                   </div>
               </div>
           </div>

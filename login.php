@@ -30,6 +30,9 @@
   <meta name="description" content="Sistema de controle para produção de suínos">
   <meta name="keywords" content="sistema, controle, produção, suínocultura, suíno">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/login.css" rel="stylesheet"./>
+  <link href="../css/adicionar.css" rel="stylesheet"./>
 
   <title>LOGIN</title>
 </head>
@@ -54,7 +57,7 @@
   <br>
 
 
-  <form action="/controller/usuarioController.php?acao=logar" class="container-historicos" method="post" enctype="multipart/form-data">
+  <form action="/controller/usuarioController.php?acao=logar" class="container-altera" method="post" enctype="multipart/form-data">
     <div class="div-inteira">
       <label class="label-cadastra" for="id_nomeLogin">Login</label>
       <input type="text" id="id_nomeLogin" name="nomeLogin" value="<?=$nomeLogin?>" required>
@@ -66,8 +69,6 @@
     <button class="button-form-voltar" type="button"><a href="index.php">Voltar</a></button>
     <button name="logar" class="button-form-altera" onclick= "validarLogin()" type="submit">Login</button>
   </form>
-
-<!-- <script src="/js/login.js"></script> -->
 
 </body>
 </html>

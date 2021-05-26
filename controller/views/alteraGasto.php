@@ -21,15 +21,15 @@
 
 <?php require_once("../includes/header.php");?>
 
-<form action="" class="container-historicos" method="post" enctype="multipart/form-data">
-
+<form action="" class="container-alterar" method="post" enctype="multipart/form-data">
+<input type="hidden" name="field_codGasto" value="<?=$codGasto ?>">
   <h2>Editar Gastos do Lote</h2>
   
-  <div class="div-metade">
+  <div class="div-inteira">
     <label class="label-cadastra" for="id_numLote">Número do lote </label>
     <input type="number" name="field_numLote" id="id_numLote" value="<?=$numLote?>" required>
   </div>
-  <div class="div-metade">
+  <div class="div-inteira">
     <label class="label-cadastra" for="id_gtVeterinario">Gastos com Veterinário </label>
     <input type="number" name="field_gtVeterinario" id="id_gtVeterinario" value="<?=$gtVeterinario?>" required>
   </div>
@@ -53,10 +53,10 @@
     <label class="label-cadastra" for="id_manPropriedade">Manutenção da Propriedade </label>
     <input type="number" name="field_manPropriedade" id="id_manPropriedade" value="<?=$manPropriedade?>" required>
   </div>
-  <div class="div-metade">
+  <div class="div-inteira">
     <label class="label-cadastra" for="id_descAbate">Desconto de Abate </label>
     <input type="number" name="field_descAbate" id="id_descAbate" value="<?=$descAbate?>" required>
   </div>
-  <button name="adiciona" class="button-form" type="submit">Salvar</button>
+  <button name="altera" class="button-form" type="submit">Alterar</button>
   
 </form>

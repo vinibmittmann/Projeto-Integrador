@@ -30,7 +30,7 @@ footer {
     font-size: 15px;
     color: rgb(209, 209, 209);
     font-weight: bold;
-    font-family: "Montserrat Bold", Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .container__text span:not(:first-child) {

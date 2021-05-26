@@ -42,6 +42,7 @@ else {
             }
             else{ 
                 $obj = new Recebimentos();
+                $obj->setcodRecebimento($_POST['field_codRecebimento']);
                 $obj->setnumLote($_POST['field_numLote']);
                 $obj->setvalorBaseVigente($_POST['field_valorBaseVigente']);
                 $obj->setboniPropriedade($_POST['field_boniPropriedade']);
@@ -53,6 +54,10 @@ else {
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraRecebimento.php";                      
+                }else{
+                    $bd = new RecebimentosDAO();
+                    if($bd->alterar($obj))
+                        header("Location: recebimentosController.php");
                 }
             }
             break;

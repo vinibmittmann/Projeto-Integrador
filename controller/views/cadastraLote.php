@@ -16,7 +16,7 @@
   ?>
 </div>
 
-<form action="" class="container-historicos" method="post" enctype="multipart/form-data">
+<form action="" class="container-alterar" method="post" enctype="multipart/form-data">
 
   <h2>Registrar Lote</h2>
   
@@ -44,7 +44,7 @@
     <label class="label-cadastra" for="id_numMorte">Núm de leitões mortos </label>
     <input type="number" name="field_numMorte" id="id_numMorte" value="<?=$numMorte?>" required>
   </div>
-  <button name="adiciona" class="button-form" type="submit">Salvar</button>
+  <button name="adiciona" class="button-form" type="submit">Cadastrar</button>
   
 </form>
 

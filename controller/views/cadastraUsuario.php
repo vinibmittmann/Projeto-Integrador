@@ -17,7 +17,7 @@
 <br>
 <br>
 
-<form  action="" class="container-historicos" method="post" enctype="multipart/form-data">
+<form  action="" class="container-alterar" method="post" enctype="multipart/form-data">
 
   <h2>CADASTRO DE USUÁRIOS</h2>
   

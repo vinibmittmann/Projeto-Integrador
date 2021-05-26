@@ -15,6 +15,7 @@
     <link href="../css/adicionar.css" rel="stylesheet"./>
     <link href="../css/footer.css" rel="stylesheet"./>
     <link href="../css/lista.css" rel="stylesheet"./>
+    <link href="../css/configuracoes.css" rel="stylesheet">
     <title>SISTEMA DE CONTROLE PARA PRODUÇÃO DE SUÍNOS</title>
 </head>
 <body>
@@ -25,9 +26,9 @@
             <li><a href="../../controller/loteController.php?acao=adiciona">Lote</a></li>
             <li><a href="../../controller/gastosController.php?acao=adiciona">Gastos</a></li>
             <li><a href="../../controller/recebimentosController.php?acao=adiciona">Recebimentos</a></li>
-            <li><a href="../../controller/loteController.php"> Ver Lote</a></li>
-            <li><a href="../../controller/gastosController.php"> Ver Gt</a></li>
-            <li><a href="../../controller/recebimentosController.php"> Ver Rec</a></li>
+            <li><a href="../../controller/loteController.php">+Lote</a></li>
+            <li><a href="../../controller/gastosController.php">+Gastos</a></li>
+            <li><a href="../../controller/recebimentosController.php">+Recebimentos</a></li>
         </ul>
         <!-- <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a> -->
     </header>

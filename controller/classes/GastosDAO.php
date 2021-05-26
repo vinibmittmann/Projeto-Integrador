@@ -33,7 +33,7 @@
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
-        } 
+        }  
 
         public function buscarAltera($codGasto){
             try{
@@ -98,10 +98,10 @@
             }
         }
 
-        public function excluir($numLote){
+        public function excluir($codGasto){
             try{
-                $query = $this->conexao->prepare("delete from gastos where numLote = :l");
-                $query->bindValue(":l", $numLote);
+                $query = $this->conexao->prepare("delete from gastos where codGasto = :c");
+                $query->bindValue(":c", $codGasto);
                 return $query->execute();
             }
             catch(PDOException $e){

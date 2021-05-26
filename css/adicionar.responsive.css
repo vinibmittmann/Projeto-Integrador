@@ -1,4 +1,4 @@
-.container-historicos {
+.container-alterar {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -56,27 +56,9 @@ select:focus {
     font-size: 15px
 }
 
-.container-historicos h2 {
+.container-alterar h2 {
     width: 100%;
     text-align: center
-}
-
-.historico {
-    color: #fff;
-    background-color: #26551df5;
-    border-radius: 13px;
-    padding: 15px;
-    font-size: 17px;
-    text-align: center;
-    width: 20%;
-    margin: 1%;
-    height: 40px
-}
-
-.historico label:hover,
-.historico:hover {
-    background-color: #289412f5;
-    cursor: pointer
 }
 
 .button-form {
@@ -106,7 +88,7 @@ select:focus {
 }
 
 @media (max-width:800px) {
-    .container-historicos {
+    .container-alterar {
         margin-left: 20vw;
         width: 60vw
     }

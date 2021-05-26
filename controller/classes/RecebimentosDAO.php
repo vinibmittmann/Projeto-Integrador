@@ -85,10 +85,10 @@
             }
         }
 
-        public function excluir($numLote){
+        public function excluir($codRecebimento){
             try{
-                $query = $this->conexao->prepare("delete from recebimentos where numLote = :l");
-                $query->bindValue(":l", $numLote);
+                $query = $this->conexao->prepare("delete from recebimentos where codRecebimento = :c");
+                $query->bindValue(":c", $codRecebimento);
                 return $query->execute();
             }
             catch(PDOException $e){

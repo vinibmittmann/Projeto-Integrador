@@ -54,6 +54,10 @@ else {
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraGasto.php";                      
+                }else{
+                    $bd = new GastosDAO();
+                    if($bd->alterar($obj))
+                        header("Location: gastosController.php"); 
                 }
             }
             break;

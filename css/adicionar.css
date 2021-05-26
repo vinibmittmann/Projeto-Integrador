@@ -1,4 +1,4 @@
-.container-historicos {
+.container-alterar {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -56,32 +56,14 @@ input[type=checkbox]:focus {
     font-size: 15px;
 }
 
-.container-historicos h2 {
+.container-alterar h2 {
     width: 100%;
     text-align: center;
 }
 
-.historico {
-    color: white;
-    background-color: #26551df5;
-    border-radius: 13px;
-    padding: 15px;
-    font-size: 17px;
-    text-align: center;
-    width: 20%;
-    margin: 1%;
-    height: 40px;
-}
-
-.historico:hover,
-.historico label:hover {
-    background-color: #6a6a6a;
-    cursor: pointer;
-}
-
 .button-form {
     background-color: #1591F1;
-    color: #6a6a6a;
+    color: #101d11;
     padding: 10px;
     margin: 15px 0 0 40%;
     border: none;
@@ -93,7 +75,7 @@ input[type=checkbox]:focus {
 
 .button-form-altera {
     background-color: #1592F1;
-    color: rgb(0, 0, 0);
+    color: #6a6a6a;
     padding: 10px;
     margin: 15px 0 0 1%;
     border: none;
@@ -114,11 +96,11 @@ input[type=checkbox]:focus {
 }
 
 .button-form-altera:hover {
-    background-color: #104312;
+    background-color: #005780;
 }
 
 .button-form-voltar {
-    background-color: #e2e1e1;
+    background-color: #1592F1;
     color: black;
     padding: 10px;
     margin: 15px 1% 0 30%;
@@ -141,7 +123,7 @@ input[type=checkbox]:focus {
 
 .button-form-adicionar-lote {
     background-color: #1592F1;
-    color: #6a6a6a;
+    color: #101d11;
     padding: 10px;
     margin: -50px 0 0 10vw;
     border: none;
@@ -177,20 +159,8 @@ input[type=checkbox]:focus {
     text-align: center;
 }
 
-.button-adiciona-historico-altera {
-    background-color: #164818;
-    color: white;
-    margin: 10px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 30%;
-    font-size: 15px;
-    font-weight: bold;
-}
-
 @media (max-width:800px) {
-    .container-historicos {
+    .container-alterar {
         margin-left: 20vw;
         width: 60vw;
     }
@@ -222,7 +192,7 @@ input[type=checkbox]:focus {
 }
 
 @media (max-width:500px) {
-    .container-historicos {
+    .container-alterar {
         font-size: 13px;
         margin-left: 10%;
         width: 80%;

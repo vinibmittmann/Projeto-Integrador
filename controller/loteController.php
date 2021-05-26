@@ -49,6 +49,10 @@ else {
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraLote.php";                      
+                }else{
+                    $bd = new LoteDAO();
+                    if($bd->alterar($obj))
+                        header("Location: loteController.php");
                 }
             }
             break;

@@ -18,11 +18,11 @@
   ?>
 </div>
 
-<form action="" class="container-historicos" method="post" enctype="multipart/form-data">
+<form action="" class="container-alterar" method="post" enctype="multipart/form-data">
 
   <h2>Registrar Recebimentos do Lote</h2>
   
-  <div class="div-metade">
+  <div class="div-inteira">
     <label class="label-cadastra" for="id_numLote">Número do lote </label>
     <input type="number" name="field_numLote" id="id_numLote" value="<?=$numLote?>" required>
   </div>
@@ -50,11 +50,11 @@
     <label class="label-cadastra" for="id_boniProdutor">Bonificação do Produtor </label>
     <input type="number" name="field_boniProdutor" id="id_boniProdutor" value="<?=$boniProdutor?>" required>
   </div>
-  <div class="div-metade">
+  <div class="div-inteira">
     <label class="label-cadastra" for="id_valorSuino">Valor por Suíno </label>
     <input type="number" name="field_valorSuino" id="id_valorSuino" value="<?=$valorSuino?>" required>
   </div>
-  <button name="adiciona" class="button-form" type="submit">Salvar</button>
+  <button name="adiciona" class="button-form" type="submit">Cadastrar</button>
   
 </form>
 

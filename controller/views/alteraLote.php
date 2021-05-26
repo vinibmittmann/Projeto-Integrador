@@ -17,8 +17,9 @@
 </div>
 
 <?php require_once("../includes/header.php");?>
+<input type="hidden" name="field_numLote" value="<?=$numLote ?>">
 
-<form action="" class="container-historicos" method="post" enctype="multipart/form-data">
+<form action="" class="container-alterar" method="post" enctype="multipart/form-data">
 
   <h2>Editar Lote</h2>
   
@@ -46,9 +47,8 @@
     <label class="label-cadastra" for="id_numMorte">Núm de leitões mortos </label>
     <input type="number" name="field_numMorte" id="id_numMorte" value="<?=$numMorte?>" required>
   </div>
-  <button name="altera" class="button-form" type="submit">Salvar</button>
+  <button name="altera" class="button-form" type="submit">Alterar</button>
   
 </form>
-<?php include ("listaGastos.php");?>
-<?php include ("listaRecebimentos.php");?>
+
 
